@@ -36,10 +36,6 @@ class HeaderLinks extends React.Component {
     this.setState({ open: false });
   };
 
-  goUserProfile = () => {
-    document.location = "/admin/user";
-  };
-
   render() {
     const { classes } = this.props;
     const { open } = this.state;
@@ -161,8 +157,7 @@ class HeaderLinks extends React.Component {
             simple={!(window.innerWidth > 959)}
             aria-label="Person"
             className={classes.buttonLink}
-            onClick = {this.goUserProfile}
-            // buttonRef = "/admin/user"
+            href = "/admin/user"
           >
             <Person className={classes.icons} />
             <Hidden mdUp implementation="css">
