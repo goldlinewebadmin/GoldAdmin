@@ -36,6 +36,10 @@ class HeaderLinks extends React.Component {
     this.setState({ open: false });
   };
 
+  goUserProfile = () => {
+    document.location = "/admin/user";
+  };
+
   render() {
     const { classes } = this.props;
     const { open } = this.state;
@@ -150,18 +154,23 @@ class HeaderLinks extends React.Component {
             )}
           </Poppers>
         </div>
-        <Button
-          color={window.innerWidth > 959 ? "transparent" : "white"}
-          justIcon={window.innerWidth > 959}
-          simple={!(window.innerWidth > 959)}
-          aria-label="Person"
-          className={classes.buttonLink}
-        >
-          <Person className={classes.icons} />
-          <Hidden mdUp implementation="css">
-            <p className={classes.linkText}>Profile</p>
-          </Hidden>
-        </Button>
+
+          <Button
+            color={window.innerWidth > 959 ? "transparent" : "white"}
+            justIcon={window.innerWidth > 959}
+            simple={!(window.innerWidth > 959)}
+            aria-label="Person"
+            className={classes.buttonLink}
+            onClick = {this.goUserProfile}
+            // buttonRef = "/admin/user"
+          >
+            <Person className={classes.icons} />
+            <Hidden mdUp implementation="css">
+              <p className={classes.linkText}>Profile</p>
+            </Hidden>
+            
+          </Button>
+        
       </div>
     );
   }
