@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.6.3/workbox-sw.js");
 
 importScripts(
-  "/GoldAdmin/precache-manifest.2c60a4496f0b7c2e1b485895aab27b55.js"
+  "/GoldAdmin/precache-manifest.1566e9b03b5757b491f891d768ede1ac.js"
 );
 
 workbox.clientsClaim();
