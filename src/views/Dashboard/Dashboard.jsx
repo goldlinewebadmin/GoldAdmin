@@ -60,21 +60,20 @@ class Dashboard extends React.Component {
             <Card>
               <CardHeader color="warning" stats icon>
                 <CardIcon color="warning">
-                  <Icon>content_copy</Icon>
+                <Icon>local_shipping</Icon>
                 </CardIcon>
-                <p className={classes.cardCategory}>Used Space</p>
-                <h3 className={classes.cardTitle}>
+                <p className={classes.cardCategory}>Envios Pendientes</p>
+                {/* <h3 className={classes.cardTitle}>
                   49/50 <small>GB</small>
-                </h3>
+                </h3> */}
+                 <h3 className={classes.cardTitle}>
+                  49
+                </h3> 
               </CardHeader>
               <CardFooter stats>
-                <div className={classes.stats}>
-                  <Danger>
-                    <Warning />
-                  </Danger>
-                  <a href="#pablo" onClick={e => e.preventDefault()}>
-                    Get more space
-                  </a>
+              <div className={classes.stats}>
+                  <Update />
+                  Actualizado
                 </div>
               </CardFooter>
             </Card>
@@ -85,13 +84,13 @@ class Dashboard extends React.Component {
                 <CardIcon color="success">
                   <Store />
                 </CardIcon>
-                <p className={classes.cardCategory}>Revenue</p>
+                <p className={classes.cardCategory}>Ventas</p>
                 <h3 className={classes.cardTitle}>$34,245</h3>
               </CardHeader>
               <CardFooter stats>
                 <div className={classes.stats}>
                   <DateRange />
-                  Last 24 Hours
+                    Este Mes
                 </div>
               </CardFooter>
             </Card>
@@ -102,13 +101,17 @@ class Dashboard extends React.Component {
                 <CardIcon color="danger">
                   <Icon>info_outline</Icon>
                 </CardIcon>
-                <p className={classes.cardCategory}>Fixed Issues</p>
-                <h3 className={classes.cardTitle}>75</h3>
+                <p className={classes.cardCategory}>Advertencias</p>
+                <h3 className={classes.cardTitle}>0</h3>
               </CardHeader>
               <CardFooter stats>
-                <div className={classes.stats}>
-                  <LocalOffer />
-                  Tracked from Github
+              <div className={classes.stats}>
+                  <Danger>
+                    <Warning />
+                  </Danger>
+                  <a href="#pablo" onClick={e => e.preventDefault()}>
+                    Ver Todas Las Advertencias
+                  </a>
                 </div>
               </CardFooter>
             </Card>
@@ -117,15 +120,15 @@ class Dashboard extends React.Component {
             <Card>
               <CardHeader color="info" stats icon>
                 <CardIcon color="info">
-                  <Accessibility />
+                  <Icon>public</Icon>
                 </CardIcon>
-                <p className={classes.cardCategory}>Followers</p>
+                <p className={classes.cardCategory}>Visitas</p>
                 <h3 className={classes.cardTitle}>+245</h3>
               </CardHeader>
               <CardFooter stats>
                 <div className={classes.stats}>
-                  <Update />
-                  Just Updated
+                  <DateRange />
+                    Este Mes
                 </div>
               </CardFooter>
             </Card>
