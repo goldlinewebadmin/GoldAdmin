@@ -12,8 +12,9 @@ import CardHeader from "components/Card/CardHeader.jsx";
 import CardAvatar from "components/Card/CardAvatar.jsx";
 import CardBody from "components/Card/CardBody.jsx";
 import CardFooter from "components/Card/CardFooter.jsx";
-
+import User from "components/User/User.jsx";
 import avatar from "assets/img/faces/marc.jpg";
+import CustomFetch from '../../components/CustomFetch/CustomFetch.jsx'
 
 const styles = {
   cardCategoryWhite: {
@@ -35,7 +36,18 @@ const styles = {
 };
 
 function UserProfile(props) {
+
   const { classes } = props;
+
+  var userClaims = User.getClaims()
+  console.log()
+
+  User.getCompany()
+  .then(responseCompany => {
+    console.log(responseCompany)
+})
+
+
   return (
     <div>
       <GridContainer>
@@ -66,6 +78,10 @@ function UserProfile(props) {
                     formControlProps={{
                       fullWidth: true
                     }}
+                    inputProps={{
+                      disabled: true,
+                      value: userClaims.UserName
+                    }}
                   />
                 </GridItem>
                 <GridItem xs={12} sm={12} md={4}>
@@ -86,6 +102,9 @@ function UserProfile(props) {
                     formControlProps={{
                       fullWidth: true
                     }}
+                    inputProps={{
+                      value: userClaims.Name
+                    }}
                   />
                 </GridItem>
                 <GridItem xs={12} sm={12} md={6}>
@@ -94,6 +113,9 @@ function UserProfile(props) {
                     id="last-name"
                     formControlProps={{
                       fullWidth: true
+                    }}
+                    inputProps={{
+                      value: userClaims.LastName
                     }}
                   />
                 </GridItem>
