@@ -27,7 +27,7 @@ const CustomFetch = {
 
                 'Content-Type': 'application/json',
 
-                'Symmetric-Key-Encrypted': resultEncrypt.cipherSymmetricKey,
+                'symmetric-key-encrypted': resultEncrypt.cipherSymmetricKey,
                 'private-ip': resultEncrypt.cipherText
             },
             body: JSON.stringify(body)
@@ -61,7 +61,7 @@ const CustomFetch = {
 
                 'Symmetric-Key-Encrypted': resultEncrypt.cipherSymmetricKey,
                 'private-ip': resultEncrypt.cipherText
-            },
+            }
             
             })
             

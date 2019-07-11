@@ -5,6 +5,7 @@ import LibraryBooks from "@material-ui/icons/LibraryBooks";
 import BubbleChart from "@material-ui/icons/BubbleChart";
 import LocationOn from "@material-ui/icons/LocationOn";
 import Notifications from "@material-ui/icons/Notifications";
+import Ballot from "@material-ui/icons/Ballot"
 import Unarchive from "@material-ui/icons/Unarchive";
 import Language from "@material-ui/icons/Language";
 // core components/views for Admin layout
@@ -62,7 +63,14 @@ const dashboardRoutes = [
   {
     path: "/notifications",
     name: "Notifications",
-    icon: Notifications,
+    icon: Ballot,
+    component: NotificationsPage,
+    layout: "/admin"
+  },
+  {
+    path: "/notifications",
+    name: "Notifications",
+    icon: LibraryBooks,
     component: NotificationsPage,
     layout: "/admin"
   }

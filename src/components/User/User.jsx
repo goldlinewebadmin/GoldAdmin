@@ -6,7 +6,7 @@ const User = {
      },
     getCompany : function(){
 
-        return  CustomFetch.get('/api/auth/userdetails/getcompanybyuserasync/null')
+        return  CustomFetch.get('/api/auth/userdetails/getcompanybyuserasync')
     }
 }
 
